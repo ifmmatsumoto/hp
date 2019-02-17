@@ -1,0 +1,50 @@
+#container {
+    width:700px;
+    margin-right: auto;
+    margin-left : auto; 
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 10px;
+}
+footer p {
+    text-align: center;
+}
+ul{
+    list-style:none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+/* コンテナ */
+#container {
+    display: grid;
+    grid-template-rows: 500px 50px;
+    grid-template-columns: 180px 1fr;
+}
+
+/* アイテム */
+#top_imige {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    padding-top: 15px;
+}
+
+#itemA {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+/*    background: #f88;*/
+}
+#menu {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+/*    background: #8f8;*/
+}
+#menu ul li {
+    display: inline-block;
+    margin-right: 5px;
+    font-family: serif;
+}
