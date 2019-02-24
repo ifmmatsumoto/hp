@@ -29,7 +29,6 @@ a {
 #title {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-/*    background: #f88;*/
 }
 #menu {
     grid-row: 2 / 3;
@@ -51,4 +50,9 @@ a {
 
 #menu ul {
      text-align: center;
+     margin-top: 10px;
+}
+#title p {
+    margin-top: 15px;
+    text-align: center;    
 }

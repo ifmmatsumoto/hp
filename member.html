@@ -3,11 +3,35 @@
 <head>
 <title></title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="css/common.css">    
 <link rel="stylesheet" href="css/mem.css">
 <link rel="stylesheet" href="css/reset.css">    
 </head>
 <body>
-    <div id="container"> <!-- コンテナ -->
+    <div id="container">
+        <div id="title"><p>THE SATISFACTION</p></div> <!-- アイテム -->
+        <div id="menu">
+            <ul>
+               <li>
+                   <a href="index.html">TOP</a>
+               </li> 
+               <li style="border-bottom: 2px solid #ff7f50;">
+                   <a href="member.html">MEMBER</a>
+               </li> 
+               <li>
+                   <a href="live.html">LIVE</a>
+               </li> 
+               <li>
+                   <a href="disk.html">DISK</a>
+               </li> 
+               <li>
+                   <a href="goods.html">GOODS</a>
+               </li> 
+               <li>
+                   <a href="mail.html">MAIL</a>
+               </li> 
+            </ul>
+        </div>        
         <div id="top_imige">
             <img src="img/top.JPG"/>
         </div> <!-- アイテム -->
@@ -17,19 +41,11 @@
             2009年結成 3〜4人組 平成二年と平成三年早生まれの学年
             </p>
         </div>
-        <div id="mem">
-            現メンバー
-            <ul>
-                <li>
-                    <a>まつざわ(Gt,左)</a>/
-                </li>
-                <li>
-                    <a href="http://ihcuorih.tumblr.com/">カールウチ(Ba,中)</a>/
-                </li>
-                <li>
-                    まさよし(Dr,右) 
-                </li>
-            </ul>
+        <div id="mem" class="clearfix">
+            <p>現メンバー</p>
+            <div class="mem">まつざわ(Gt,左)</div>
+            <div class="mem">カールウチ(Ba,中)</div>
+            <div class="mem">まさよし(Dr,右) </div>            
         </div>
         <div id="ex-mem">
             <ul>
@@ -50,6 +66,10 @@
                 </li>
             </ul>
         </div>
-    </div>    
+    </div> 
+    <footer>
+        <p><small>&copy; 2019 tsf</small></p>
+    </footer>
+
 </body>
 </html>
