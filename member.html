@@ -1,79 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>THE SATISFACTION</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="css/common.css">    
-<link rel="stylesheet" href="css/mem.css">
-<link rel="stylesheet" href="css/reset.css">    
-</head>
-<body>
-    <div id="container">
-        <div id="title"><p>THE SATISFACTION</p></div> <!-- アイテム -->
-        <div id="menu">
-            <ul>
-               <li>
-                   <a class="nav" href="index.html">TOP</a> 
-               </li> 
-               <li style="border-bottom: 2px solid #ff7f50;">
-                   <a class="nav" href="member.html">MEMBER</a>
-               </li> 
-               <li>
-                   <a class="nav" href="live.html">LIVE</a>
-               </li> 
-               <li>
-                   <a class="nav" href="disk.html">DISK</a>
-               </li> 
-               <li>
-                   <a class="nav" href="goods.html">GOODS</a>
-               </li> 
-               <li>
-                   <a class="nav"    href="mail.html">MAIL</a>
-               </li> 
-            </ul>
-        </div>        
-        <div id="top_imige">
-            <img src="img/top.JPG"/>
-        </div> <!-- アイテム -->
-        <div id="prof">
-            <p>
-            THE SATISFACTION<br>
-            2009年結成 3〜4人組 平成二年と平成三年早生まれの学年
-            </p>
-        </div>
-        <div id="mem" class="clearfix">
-            <p>現メンバー</p>
-            <div class="mem">まつざわ(Gt,左)</div>
-            <div class="mem">
-            <p>カールウチ(Ba,中)</p>
-            <a href="http://ihcuorih.tumblr.com/" target="_blank"><img id="tumblr" src="img/Tumblr.png"></a>
-            </div>
-            <div class="mem">まさよし(Dr,右) </div>            
-        </div>
-        <div id="ex-mem">
-            <ul>
-                <li>
-                    元メンバー
-                </li>
-                <li>
-                    <a>ホセロ(Dr)→おやすみ中</a>/
-                </li>
-                <li>
-                    <a>ヤコブ(GtVo-2012)→家主</a>/
-                </li>
-                <li>
-                    フューチャー(Ba-2011)→WORRY BOY GLORY→エアコン整備
-                </li>
-                <li>
-                    原(Gt-2010)→格闘家→開業
-                </li>
-            </ul>
-        </div>
-    </div> 
-    <footer>
-        <p><small>&copy; 2019 tsf</small></p>
-    </footer>
-</body>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/mem.css" rel="stylesheet">
 
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+  <body>
+    <!--header始まり-->
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <span class="logoFont">THE SATISFACTION</span>
+        </a>
+      </div>
+
+      <nav class="menu">
+          <div id="nav-open" style="float:right;">
+            <span></span>
+          </div>
+          <!--中身-->
+          <div id="nav-content">
+            <div class="hamburger-top"></div>
+            <ul class="category">
+              <li class="category-title"><a href="index.html">TOP</a></li>
+              <li class="category-title"><a href="goods.html">GOODS</a></li>
+              <li class="category-title"><a href="member.html">MEMBER</a></li>
+              <li class="category-title"><a href="live.html">LIVE</a></li>
+              <li class="category-title"><a href="disk.html">DISK</a></li>
+              <li class="category-title"><a href="#">MAIL</a></li>
+            </ul>
+          </div>        
+          <ul class="global-nav">
+            <li><a href="index.html"><span>TOP</span></a></li>
+            <li><a href="goods.html"><span>GOODS</span></a></li>
+            <li><a href="member.html"><span>MEMBER</span></a></li>
+            <li><a href="live.html"><span>LIVE</span></a></li>
+            <li><a href="disk.html"><span>DISK</span></a></li>
+            <li><a href="mail.html"><span>MAIL</span></a></li>
+          </ul>
+      </nav>
+    </header>
+    <!--header終わり-->
+    <!--wrap始まり-->
+     <div id="wrap" style="width: 100%;margin-bottom: 10px;">
+        <div class="content">
+          <img src="img/member.jpg" style="width: 100%;">
+          <p style="margin-top: 20px;">2009年結成 3〜4人組 平成二年と平成三年早生まれの同級生</p>
+          <div class="mem clearfix" style="margin-top: 20px;">
+            <div class="tsf">
+              <p>
+                松澤　朗<br/>
+                まつざわ　あきら
+              </p>
+                Vocal, Guitar<br/>
+              <a href="https://twitter.com/tsf_jpn" target="_blank"><img class="overwhite" src="img/Twitter.png"></a>
+              </div>
+              <div class="tsf">
+              <p>
+                広内　遼太郎<br/>
+                ひろうち　りょうたろう
+              </p>
+                Bass, Vocal<br/>
+
+                <a href="https://twitter.com/ihcuorih"  target="_blank"><img class="overwhite" src="img/Twitter.png"></a>
+                <a href="http://ihcuorih.tumblr.com/" style="margin-left: 2px;" target="_blank"><img class="overwhite" src="img/tumblr.png" ></a>
+                
+              </div>
+              <div class="tsf">
+              <p>
+                松本　才佳<br/>
+                まつもと　まさよし
+              </p>
+                Drum<br/>
+                <a href="https://twitter.com/matsuyoshimoto" target="_blank"><img class="overwhite" src="img/Twitter.png"></a>
+            </div>
+          </div>
+          
+          <p style="margin-top: 20px;">いままでのメンバーたち</p>
+          <div class="ex-mem" style="margin-top: 10px;">
+            <p>
+            ホセロ(Dr)→おやすみ中<br/>
+              ヤコブ(GtVo-2012)→<a href="http://yanushinakimochi.huuryuu.com/">家主</a><br/>
+            フューチャー(Ba-2011)→WORRY BOY GLORY→エアコン整備<br/>
+            原(Gt-2010)→格闘家→開業
+            </p>
+          </div>
+
+       
+       
+       </div>
+    </div>
+    <!--wrap終わり-->
+    <!--footer始まり-->
+    <footer><small>&copy; 2019 tsf</small></footer>
+    <!--footer終わり-->
+  </body>
+
+  </html>

@@ -1,111 +1,57 @@
-#container {
-    width:700px;
-    margin-right: auto;
-    margin-left : auto; 
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
-}
-ul{
-    list-style:none;
-}
-footer {
-    margin-top: 10px;
-}
-footer p {
-    text-align: center;
-}
-ul{
-    list-style:none;
-}
-.nav {
-    position: relative;
-    text-decoration: none;
-    color: black;
-}
-.nav::after {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #ff7f50;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform .3s;
-}
-.nav:hover::after {
-  transform: scale(1, 1);
-}
+@charset "utf-8";
 
-/* コンテナ */
-#container {
-    display: grid;
-    grid-template-rows: 50px 50px 500px 50px 100px 100px;
-    grid-template-columns: 700px;
-}
-
-/* アイテム */
-#title {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-}
-#menu {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
-
-#top_imige {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-}
-
-#prof {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-}
-#mem {
-    grid-row: 5 / 6;
-    grid-column: 1 / 2;
-
-}
-#ex-mem {
-    grid-row: 6 / 7;
-    grid-column: 1 / 2;
-}
-
-#mem ul li {
-    display: inline-block;
-    margin-right: 5px;
-    font-family: serif;
+p {
+  font: 12px/1 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .mem {
+  width: 100%;
+  margin: 0 auto; 
+
+}
+
+.tsf p {
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.tsf a img {
+  height: 20px;
+  margin-top: 10px;
+}
+.tsf p {
+    font-weight: bold;
+  }
+.ex-mem p {
+  line-height: 1.7;
+}
+
+/*PC*/
+@media screen and (min-width:481px){
+
+  .tsf {
+    width: 33%;
     float: left;
-    margin-top: 5px;
-    margin-right: 50px
-        
+  }
 }
-#menu ul li {
-    display: inline-block;
-    margin-right: 10px;
-    font-family: serif;
-}
-#menu ul {
-     text-align: center;
-     margin-top: 10px;
-}
-#title p {
-    margin-top: 15px;
-    text-align: center;    
-}
-footer {
+
+/*スマホ*/
+@media screen and (max-width:480px){
+  .tsf {
     margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom:0.5px solid #e8e8e8;
+    
+  }
 }
-footer p {
-    text-align: center;
-}
-#tumblr{
-    height: 20px;
-    margin-top: 5px;
+
+
+.tsf a:hover img.overwhite{
+    cursor:pointer;
+    filter: alpha(opacity=60);        /* ie lt 8 */
+    -ms-filter: "alpha(opacity=60)";  /* ie 8 */
+    -moz-opacity:0.6;                 /* FF lt 1.5, Netscape */
+    -khtml-opacity: 0.6;              /* Safari 1.x */
+    opacity:0.6;
+    zoom:1;
 }

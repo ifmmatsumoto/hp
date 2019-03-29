@@ -29,18 +29,19 @@ body {
 /*一旦  line-height: 2;*/
 }
 
+* {
+  margin: 0;
+  padding: 0;
+
+}
 
 footer {
   width: 100%;
   margin: 0 auto;
-  padding-top: 15px;
+  padding-bottom:15px;
   text-align: center;
-  border-top: 1px solid black;
 }
 
-.center {
-  text-align: center;
-}
 
 .global-nav li {
   display: inline;
@@ -57,16 +58,44 @@ footer {
   margin: 30px auto 20px auto;
 }
 
+/*スマホ用ココから*/
 @media screen and (max-width:480px){
+  .logo {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .menu {
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+
+  }
+  .logoFont {
+  font-family:dinneuzeitgroteskltw01-_812426,sans-serif; 
+  color: white;
+  }
+
+  #menu {
+    float: right;
+  }
   header {
-  width: 100%;
-  height: 100px;
-  margin: 0 auto;
-}
-.content {
-  width: 100%;
-  margin: 30px auto 20px auto;
-}
+    position: fixed;            /* ヘッダーの固定 */
+    top: 0px;                   /* 位置(上0px) */
+    left: 0px;                  /* 位置(右0px) */
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color:black;
+  }
+  .global-nav {
+    display: none;
+  }
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
   #info {
     width:100%; 
     margin: 0 auto;
@@ -75,8 +104,128 @@ footer {
     margin-top: 20px;
     margin-left: 2%;
   }
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+  }
+  /*ハンバーガーアイコンをCSSだけで表現*/
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    transition: all 0.4s;
+    height: 3px;/*線の太さ*/
+    width: 25px;/*長さ*/
+    border-radius: 3px;
+    background: #ffffff;
+    display: block;
+    content: '';
+    cursor: pointer;
+    z-index: 9999;/*最前面*/
+  }
+  #nav-open span:before {
+    bottom: -8px;
+  }
+  #nav-open span:after {
+    bottom: -16px;
+  }
+  /*中身*/
+  #nav-content {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+  }
+  #nav-content.open {
+    display: block;
+    opacity: 1;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);/*背景色*/
+    overflow: hidden;/*ブラー効果でボヤけた部分を非表示*/
+  }
+  /*:beforeにぼかし効果を設定する*/
+  #nav-content.open:before {
+    content: '';
+    overflow: hidden;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    z-index: -1;/*重なり順序を一番下にしておく*/
+  }
+  /*チェックが入ったら表示する内容*/
+  .hamburger-top {
+    height: 40px;/*×ボタンと被らないように*/
+  }
+  .category {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .category-title {
+    padding: 0.5rem;
+  }
+  .category-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  /*三本線を動かす*/
+  #nav-open.active span {
+    -webkit-transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
+     background: #000000;
+  }
+  #nav-open.active span:before {
+    -webkit-transform: translateY(-8px) rotate(45deg);/*打ち消す*/
+    transform: translateY(-8px) rotate(45deg);/*打ち消す*/
+    opacity: 0;
+  }
+  #nav-open.active span:after {
+    -webkit-transform: translateY(-16px) rotate(45deg);
+    transform: translateY(-16px) rotate(90deg);
+    background: #000000;
+  }
+  .infoWidth {
+    margin: 0;
+    width: 90%;
+  }
+
+  .mvWidth {
+    margin: 0;
+    width: 90%;
+  }
+  .mv {
+  margin: 0;
+  margin-bottom: 40px;
+  }
+
 }
-@media screen and (min-width:781px){
+/*スマホ用ココまで*/
+
+/*PC*/
+@media screen and (min-width:481px){
+  .logo {
+    text-align: center;
+  }
+  .logoFont {
+    font-family:dinneuzeitgroteskltw01-_812426,sans-serif; 
+    color: white;
+    font-size:35px;
+  }
+  .menu {
+    text-align: center;
+  }
+  
+  
   header {
     position: fixed;            /* ヘッダーの固定 */
     top: 0px;                   /* 位置(上0px) */
@@ -91,7 +240,7 @@ footer {
   }
   .content {
     width: 960px;
-    margin: 30px auto 20px auto;
+    margin: 0 auto;
   }
   #info {
     width:960px; 
@@ -114,8 +263,24 @@ footer {
     display: block;
     clear: both;
   }
+  #nav-open {
+    display: none;
+  }
+  .infoWidth {
+    float: left;
+    margin: 0;
+    width: 50%;
+  }
+  .mvWidth {
+    float: right;
+    margin: 0;
+    width: 45%;
+  }
+  .mv {
+    margin-bottom: 50px;
+  }
+}
+#nav-content {
+  display: none;
 }
 
-.mv {
-  margin-bottom: 50px;
-}

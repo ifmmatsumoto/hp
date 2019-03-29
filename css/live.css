@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+h2 {
+  margin-bottom: 20px;
+}
+
+
+.live {
+  width: 100%;
+  border-bottom:0.5px solid #e8e8e8;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width:480px){
+    .liveDetail {
+      margin-left: 10px;
+    }
+  ｝
