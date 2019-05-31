@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+img {
+  height: 288px;
+}
+
+.disk {
+  width: 30%;
+  height: 300px;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
