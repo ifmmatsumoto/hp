@@ -1,7 +1,0 @@
-Options +FollowSymLinks
-
-RewriteEngine on
-
-RewriteCond %{THE_REQUEST} ^.*/index.html
-
-RewriteRule ^(.*)index.html$ http://52.194.225.85/$1 [R=301,L]
